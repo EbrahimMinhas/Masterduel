@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "jsx": "react",
+    "target": "ES6",
+    "baseUrl": "./src",
+    "moduleResolution": "node",
+    "types": ["react/next", "react-dom/next"],
+    "paths": {
+        "@containers/*": ["./containers/*"],
+        "@stylesheets/*": ["./styles/*"]
+    }
+  }
+}
