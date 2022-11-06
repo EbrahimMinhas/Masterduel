@@ -9,11 +9,11 @@ module.exports = {
   }, mode: process.env.NODE_ENV || "development",
   resolve: {
     extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
-    // alias: {
-    //   containers: path.resolve(__dirname, 'src/containers/'),
-    //   components: path.resolve(__dirname, 'src/components/'),
-    //   styles: path.resolve(__dirname, 'src/styles/'),
-    // }
+    alias: {
+      containers: path.resolve(__dirname, 'src/containers/'),
+      components: path.resolve(__dirname, 'src/components/'),
+      styles: path.resolve(__dirname, 'src/styles/'),
+    }
   },  devServer: {
     port: 3000,
     static: true
@@ -28,13 +28,18 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader", "sass-loader",
+      ],
       },
       {
         test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
         use: ["file-loader"]
       },
       { test: /\.tsx?$/, loader: 'ts-loader' },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [

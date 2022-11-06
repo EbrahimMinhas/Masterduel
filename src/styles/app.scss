@@ -1,2 +1,23 @@
+@font-face {
+  font-family: 'Sharetech-Regular';
+  src: url('../assets/fonts/ShareTech-Regular.ttf');
+}
+
+html {
+  height: 100%;
+  font-family: 'Sharetech-Regular';
+}
+
 body {
+  color: white;
+  background-color: rgb(38, 38, 38);
+  margin: 0;
+  font-family: 'Sharetech-Regular';
+  font-size: 2rem;
+
+  height: 100%;
+
+  #root {
+    height: 100%;
+  }
 }
